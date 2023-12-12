@@ -1,0 +1,39 @@
+utiliser pnpm run start
+
+ajouter un schema
+
+ajouter un model
+
+envoyer sur un route
+
+recupèrer la data
+
+voir la data sur la route
+
+Utiliser insomnia ou postman pour vérifier les requetes : post, get, del, add, put
+
+- créer les schema pour la data et envoyer dans une collection
+- créer les models à partir du schéma 
+- créer les routes pour les models
+- créer les controllers pour les routes
+[ . . . schema . . . ]
+[ . . . model . . . ]
+[ . . . route . . . ]
+[ . . . controller . . . ]  // CRUD
+
+- créer un login et un register
+- créer un middleware pour vérifier le token
+- créer un middleware pour vérifier le role
+[ . . . login . . . ]
+[ . . . register . . . ]
+[ . . . middleware . . . ]
+
+- créer un service pour envoyer un mail
+[ . . . mail . . . ]
+
+- créer un panel admin
+- créer un panel user
+[ . . . admin . . . ]
+[ . . . user . . . ]
+
+

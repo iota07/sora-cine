@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Montserrat-Italic";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Montserrat-Italic"),
+    url(assets/fonts/Montserrat-Italic-VariableFont_wght.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat"),
+    url(assets/fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  @apply bg-gray-900;
+}
