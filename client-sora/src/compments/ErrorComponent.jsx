@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import sukuna from "./src/assets/images/jujutsu.png";
+import sukuna from "../assets/images/jujutsu.png";
 
 function ErrorComponent() {
   const [errorDetails, setErrorDetails] = useState({
