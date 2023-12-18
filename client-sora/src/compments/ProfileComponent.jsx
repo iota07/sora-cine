@@ -81,7 +81,7 @@ function ProfileComponent() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://sora-cine.onrender.com/user/65786d43bc878cd0d66e1dae"
+          "http://localhost:3200/user/65786d43bc878cd0d66e1dae"
         );
         const userData = await response.json();
         setUser(userData.message);

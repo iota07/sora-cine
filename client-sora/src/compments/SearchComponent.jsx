@@ -11,7 +11,7 @@ const SearchComponent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://sora-cine.onrender.com/series");
+        const response = await fetch("http://localhost:3200/series");
 
         if (!response.ok) {
           throw new Error(`Network response was not ok: ${response.status}`);

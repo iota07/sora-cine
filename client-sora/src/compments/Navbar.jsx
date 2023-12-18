@@ -4,7 +4,7 @@ import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 import AuthContext from "../API/AuthContext";
 
-import sora from "../assets/images/sora.svg";
+import sora from "../assets/images/sora.png";
 import SearchComponent from "./SearchComponent";
 
 function Navbar() {
@@ -42,8 +42,8 @@ function Navbar() {
     { id: 2, to: "contact", text: "Contact" },
   ];
   const linksLoggedIn = [
-    { id: 0, to: "/", text: "Anime" },
-    { id: 1, to: "settings", text: "Settings" },
+    { id: 0, to: "profile", text: "Anime" },
+    { id: 1, to: "profile/settings", text: "Settings" },
   ];
 
   const NavLinkComponent = (props) => {
@@ -111,8 +111,8 @@ function Navbar() {
           />
         </svg>
       </button>
-      <button className="flex-initial w-36">
-        <img src={sora} alt="Sora" />
+      <button className="flex-initial w-36 grid place-items-center">
+        <img src={sora} alt="Sora" className="h-12" />
       </button>
       <nav
         className={`z-50 lg:z-0 flex-1 lg:flex h-full w-full lg:h-auto backdrop-blur lg:backdrop-blur-none left-0 top:-1 lg:grid lg:place-items-center ${
