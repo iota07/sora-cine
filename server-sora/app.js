@@ -74,15 +74,18 @@ app.get("/login", getLogin);
 app.get("/contact", getContact);
 app.post("/contact", postContact);
 
-app.get("/series", /*requireAuth*/, async (req, res) => {
-  try {
-    const liste = await getAllSeries();
-    res.send(liste);
-  } catch (error) {
-    console.error("Erreur lors de l'exécution de getSeries:", error);
-    res.status(500).send("Erreur interne du serveur");
+app.get(
+  "/series",
+  /*requireAuth*/ async (req, res) => {
+    try {
+      const liste = await getAllSeries();
+      res.send(liste);
+    } catch (error) {
+      console.error("Erreur lors de l'exécution de getSeries:", error);
+      res.status(500).send("Erreur interne du serveur");
+    }
   }
-});
+);
 app.get("/series/mystery", async (req, res) => {
   try {
     const liste = await getMystery();
