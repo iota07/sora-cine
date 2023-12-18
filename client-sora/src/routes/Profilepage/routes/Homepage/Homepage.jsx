@@ -14,7 +14,6 @@ import {
 } from "framer-motion";
 
 import { useRef } from "react";
-import SearchComponent from "../../../../compments/SearchComponent";
 
 function Homepage() {
   const targetRef = useRef < HTMLDivElement > null;
@@ -47,7 +46,9 @@ function Homepage() {
     // Fetch data for Mystery category
     const fetchMysteryData = async () => {
       try {
-        const response = await fetch("http://localhost:3200/series/mystery");
+        const response = await fetch(
+          "https://sora-cine.onrender.com/series/mystery"
+        );
         const data = await response.json();
 
         const mysteryCards = data.map((item) => ({
@@ -65,7 +66,9 @@ function Homepage() {
     // Fetch data for Crime category
     const fetchCrimeData = async () => {
       try {
-        const response = await fetch("http://localhost:3200/series/Crime");
+        const response = await fetch(
+          "https://sora-cine.onrender.com/series/Crime"
+        );
         const data = await response.json();
 
         const crimeCards = data.map((item) => ({
@@ -81,7 +84,9 @@ function Homepage() {
     };
     const fetchFantasyData = async () => {
       try {
-        const response = await fetch("http://localhost:3200/series/fantasy");
+        const response = await fetch(
+          "https://sora-cine.onrender.com/series/fantasy"
+        );
         const data = await response.json();
 
         const fantasyCards = data.map((item) => ({
@@ -99,7 +104,9 @@ function Homepage() {
     // Fetch data for Action/Adventure category
     const fetchActionAdventureData = async () => {
       try {
-        const response = await fetch("http://localhost:3200/series/act_adv");
+        const response = await fetch(
+          "https://sora-cine.onrender.com/series/act_adv"
+        );
         const data = await response.json();
 
         const actionAdventureCards = data.map((item) => ({
@@ -117,7 +124,9 @@ function Homepage() {
     // Fetch data for Comedy category
     const fetchComedyData = async () => {
       try {
-        const response = await fetch("http://localhost:3200/series/comedy");
+        const response = await fetch(
+          "https://sora-cine.onrender.com/series/comedy"
+        );
         const data = await response.json();
 
         const comedyCards = data.map((item) => ({
