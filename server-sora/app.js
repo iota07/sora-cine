@@ -74,7 +74,7 @@ app.get("/login", getLogin);
 app.get("/contact", getContact);
 app.post("/contact", postContact);
 
-app.get("/series", requireAuth, async (req, res) => {
+app.get("/series", /*requireAuth*/, async (req, res) => {
   try {
     const liste = await getAllSeries();
     res.send(liste);
