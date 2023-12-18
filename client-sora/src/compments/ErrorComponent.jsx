@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import sukuna from "./src/assets/images/jujutsu.png";
 
 function ErrorComponent() {
   const [errorDetails, setErrorDetails] = useState({
@@ -61,11 +62,7 @@ function ErrorComponent() {
       <>
         <section className="grid grid-rows-2 grid-flow-col h-screen bg-yellow-200 sm:pt-12 md:pt-18 lg:pt-24 lg:pt-32 rounded-lg justify-center lg:grid-rows-1">
           <figure className="lg:pl-48">
-            <img
-              className="rounded-b-3xl"
-              src="./src/assets/images/jujutsu.png"
-              alt="image of Sukuna"
-            />
+            <img className="rounded-b-3xl" src={sukuna} alt="image of Sukuna" />
           </figure>
 
           <section className="pb-4 text-center align-center backdrop-blur rounded-xl lg:order-first lg:absolute lg:max-w-xl lg:pl-12 xl:pl-48 xl:max-w-2xl 2xl:pl-72 2xl:max-w-4xl">
