@@ -81,7 +81,7 @@ function ProfileComponent() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:3200/user/65786d43bc878cd0d66e1dae"
+          "https://sora-cine.onrender.com/user/65786d43bc878cd0d66e1dae"
         );
         const userData = await response.json();
         setUser(userData.message);
@@ -127,13 +127,16 @@ function ProfileComponent() {
         }, 500);
       }
 
-      const response = await fetch(`http://localhost:3200/user/${user._id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(updatedUser),
-      });
+      const response = await fetch(
+        `https://sora-cine.onrender.com/user/${user._id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(updatedUser),
+        }
+      );
 
       if (response.ok) {
         console.log(`Successfully updated ${fieldName}`);

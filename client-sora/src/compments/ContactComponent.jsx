@@ -55,7 +55,7 @@ function ContactComponent() {
     event.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:3200/contact", {
+      const response = await fetch("https://sora-cine.onrender.com/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

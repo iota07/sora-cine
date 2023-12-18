@@ -55,7 +55,7 @@ function SignupComponent() {
     event.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:3200/user", {
+      const response = await fetch("https://sora-cine.onrender.com/user", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
