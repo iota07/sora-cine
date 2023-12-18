@@ -23,7 +23,7 @@ function Newsletter() {
       }
       const sanitizedEmail = validator.escape(email);
 
-      const res = await fetch("http://localhost:3200/newsletter", {
+      const res = await fetch("https://sora-cine.onrender.com/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: sanitizedEmail }),
