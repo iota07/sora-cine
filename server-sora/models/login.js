@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require("mongoose")
 
 const loginSchema = new mongoose.Schema(
   {
@@ -6,8 +6,8 @@ const loginSchema = new mongoose.Schema(
     password: { type: String, required: true },
   },
   { collection: "logins" }
-);
+)
 
-const loginModel = mongoose.model("logins", loginSchema);
+const loginModel = mongoose.model("logins", loginSchema)
 
-module.exports = loginModel;
+module.exports = loginModel
