@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Newsletter } from "./Newsletter.jsx";
+import sora from "../assets/images/sora.svg";
 
 const Footerlanding = () => {
   return (
@@ -17,12 +18,9 @@ const Footerlanding = () => {
             <li className="pl-2">
               <NavLink to="/contact">Contact</NavLink>
             </li>
-            <li className="pl-2">
-              <NavLink to="/about">About Sora</NavLink>
-            </li>
           </ul>
           <figure className="place-self-center pt-6 pb-4 col-1">
-            <img src="" alt="logo" />
+            <img src={sora} alt="logo" />
           </figure>
           <article className="col-span-2 md:place-self-end pb-6 ">
             <Newsletter />

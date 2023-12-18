@@ -1,15 +1,17 @@
 import "./index.css";
-import { Outlet } from "react-router-dom";
-import { Navbar } from "./compments/Navbar";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 import { ModalCookie } from "./compments/ModalCookie";
+import { Navbar } from "./compments/Navbar";
+
 function App() {
   return (
     <>
-      <Navbar />
       <ModalCookie />
-      <main className="min-h-screen">
+      <Navbar />
+      <main className="min-h-screen bg-gray-900">
         <Outlet></Outlet>
       </main>
+      <ScrollRestoration />
     </>
   );
 }
