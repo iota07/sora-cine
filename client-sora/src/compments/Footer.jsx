@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Newsletter } from "./Newsletter.jsx";
-import sora from "../assets/images/sora.svg";
+import sora from "../assets/images/sora.png";
 
 const Footerlanding = () => {
   return (

@@ -51,7 +51,7 @@ function LoginComponent() {
     event.preventDefault();
 
     try {
-      const response = await fetch("https://sora-cine.onrender.com/login", {
+      const response = await fetch("http://localhost:3200/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -64,14 +64,21 @@ function LoginComponent() {
         console.error("Error submitting form:", errorMessage);
         throw new Error("Failed to submit form");
       }
+
       // Handle success (e.g., show a success message)
       const responseData = await response.json();
-      console.log("Form submitted successfully:", responseData);
       login();
       navigateToHomepage();
     } catch (error) {
       // Handle errors (e.g., show an error message)
       console.error("Error submitting form:", error.message);
+
+      // Assuming there's a state to store the error message
+      // Update the state to display the error message in the UI
+      setValidationErrors({
+        ...validationErrors,
+        submitError: "An error occurred while submitting the form.",
+      });
     }
   };
 
@@ -182,6 +189,11 @@ function LoginComponent() {
             Sign in
           </button>
         </form>
+        {validationErrors.submitError && (
+          <p className="text-red-500 max-w-{12rem} text-center text-xs">
+            {validationErrors.submitError}
+          </p>
+        )}
         <NavLink className="flex justify-center text-sm text-teal-400">
           Forget password?
         </NavLink>
