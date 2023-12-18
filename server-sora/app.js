@@ -32,10 +32,10 @@ app.use(cookieParser());
 
 const corsOptions = {
   origin: [
-    "http://localhost:5173/",
-    "https://sora-cine.herokuapp.com/",
-    "https://sora-cine.vercel.app/",
-    "https://iota07-soracine.netlify.app/",
+    "http://localhost:5173",
+    "https://sora-cine.herokuapp.com",
+    "https://sora-cine.vercel.app",
+    "https://iota07-soracine.netlify.app",
   ],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
