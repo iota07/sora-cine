@@ -39,15 +39,15 @@ To run react frontend
 
 ### install pnpm
 
-npm install -g pnpm
+`npm install -g pnpm`
 
 ### install dependencies
 
-pnpm install
+`pnpm install`
 
 ### run the vite server
 
-pnm run dev
+`pnm run dev`
 
 ## BACK
 
